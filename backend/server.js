@@ -8,13 +8,15 @@ app.use(express.json());
 app.use(
   cors({
     origin: "*",
+    methods: ["GET"],
+    credentials: true,
   })
 );
 
 mongoose.set("strictQuery", false);
 mongoose
   .connect(
-    "mongodb+srv://santosh:Lucypapa@cluster0.iwqqdfo.mongodb.net/"
+    "mongodb+srv://santosh:Lucypapa@cluster0.iwqqdfo.mongodb.net/?retryWrites=true&w=majority"
     // Lucypapa pASSWORD
   )
   .then(() => console.log("Db connected..."));

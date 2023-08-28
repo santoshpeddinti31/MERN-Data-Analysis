@@ -36,12 +36,12 @@ const RegionData = function () {
       const labels = [];
       await fetch(url)
         .then((data) => {
-          console.log("API Data", data);
+          // console.log("API Data", data);
           const res = data.json();
           return res;
         })
         .then((res) => {
-          console.log("it is res", res);
+          // console.log("it is res", res);
 
           for (const val of res) {
             dataSet1.push(val.region.length);
@@ -66,7 +66,7 @@ const RegionData = function () {
               },
             ],
           });
-          console.log("arrData", dataSet1);
+          // console.log("arrData", dataSet1);
         })
         .catch((err) => {
           console.log(err.message);

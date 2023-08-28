@@ -14,9 +14,10 @@ const YearData = () => {
     <div className="dot">
       <div className="year">
         {data.map((item) => (
-          <p>
+          <p key={item._id}>
             {item.end_year === "" ? "N.A" : item.end_year}
-            &nbsp;&nbsp;&nbsp;&nbsp;<span>{item.country}</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <span>{item.country}</span>
           </p>
         ))}
       </div>
