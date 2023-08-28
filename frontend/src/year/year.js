@@ -7,9 +7,10 @@ const YearData = () => {
   const [data, setDate] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/alldata").then((arr) => setDate(arr.data));
+    axios
+      .get("https://mern-data-api.vercel.app/alldata")
+      .then((arr) => setDate(arr.data));
   }, []);
-
   return (
     <div className="dot">
       <div className="year">

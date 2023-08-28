@@ -33,9 +33,7 @@ const LikeHood = function () {
   });
   useEffect(() => {
     const fetchData = async () => {
-      const url = "http://localhost:5000/alldata";
-      // const url = "https://mern-data-backend-development.vercel.app/alldata";
-
+      const url = "https://mern-data-api.vercel.app/alldata";
       const dataSet1 = [];
       const labels = [];
       await fetch(url)
