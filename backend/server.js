@@ -19,6 +19,10 @@ mongoose
   )
   .then(() => console.log("Db connected..."));
 
+app.get("/", (req, res) => {
+  res.send("hello santosh this is backend server");
+});
+
 app.get("/alldata", async (req, res) => {
   try {
     const data = await Statistic.find();
